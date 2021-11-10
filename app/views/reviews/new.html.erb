@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Leave a Review for <%= @restaurant.name %></h2>
+<%# when you want to create a simple form for nested resources %>
+<%# you to give an array to the method %>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <%= f.submit 'Leave a review', class: 'btn btn-primary' %>
+  <% end %>
+</div>
